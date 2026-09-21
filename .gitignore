@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+build/
+.next/
+out/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# OS/editor files
+.DS_Store
+.vscode/
+
+# Test output
+coverage/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
