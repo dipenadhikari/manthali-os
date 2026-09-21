@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  foundation-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify project foundation
+        run: |
+          test -f README.md
+          test -f docs/problem.md
+          test -f docs/mvp.md
+          test -f docs/workflow.md
+          test -f docs/architecture.md
+          test -f database/schema/schema.md
+          test -f ai/README.md
+          test -f analytics/events.md
+          test -f tests/README.md
+          echo "ManthaliOS foundation is present."
